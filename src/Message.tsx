@@ -17,7 +17,7 @@ const RomanNumeralConverter = () => {
 
   const handleButtonClick = async () => {
     try {
-      const response = await fetch(`http://localhost:8082/romannumeral?query=${input}`);
+      const response = await fetch(`http://localhost:8083/romannumeral?query=${input}`);
       const data = await response.json();
       setOutput(data.output);
     //  setOutput("XI");
@@ -37,7 +37,7 @@ const RomanNumeralConverter = () => {
        // min={1}
        // max={3999}
       />
-      <Button variant="cta" onPress={handleButtonClick}>
+      <Button variant="accent" onPress={handleButtonClick}>
         Convert to roman numerals converter
       </Button>
       <Text>{output}</Text>
